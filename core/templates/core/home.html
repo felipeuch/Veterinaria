@@ -1,0 +1,104 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+
+
+{% block contenido %}
+
+ 
+
+
+<main>
+    <section id="banner">
+        <img src="{% static 'core/img/accesorio-perros-banner.jpg' %}">
+        <div class="contenedor">
+            <h2> Cuida a tus mascotas</h2>
+            <p>¿Según usted cuál es la mejor mascota?</p>
+            <a href="{% url 'contacto' %}">Encuentanos</a>         
+        </div>
+       
+    </section>
+
+    <div id="principal_slider">
+        <br>
+        <div class="bannerslider">
+            <div class="slider">
+                {% for m in imagen %}
+                <div>
+                    {% if m.imagen %}
+                    
+                        <img src="{{ m.imagen.url }}" class="imagen_slider" alt="slider 1" title="imagen 1">
+                        {% endif %}
+                  
+                        
+                </div>
+                {% endfor %}
+              
+            </div>
+        </div>
+    </div>
+    
+    <section id="Bienvenidos">
+       
+        <h2>BIENVENIDOS A NUESTRA VETERINARIA</h2>
+        <p>Aquí encontrarás toda la información relevante de la clínica especializada en pequeños animales y animales exóticos, en ella encontrarás datos utiles sobre tu mascota, curiosidades y todo lo relevante a la salud de nuestros pequeños amigos. Tratamientos Veterinario a Animales Exóticos, Visitas domiciliarias, Servicios de Peluquería canina, Baño Sanitario, Corte de pelo canino, Realce de color, Corte de uñas para mascotas, Ecografías Veterinarias, Cirugías Veterinarias, Radiografía Digital para mascotas, Anestesia con Gases, Vacunas Veterinarias, Farmacia Veterinarias. Entre otros servicios.</p>
+       
+    </section>
+
+    <section id="Blog">
+        <br>
+        <h3>Nuestro Equipo Especializado</h3>
+        <div class="contenedor">
+                <article>
+                    <img src="{% static 'core/img/veterpet-servicios-veterinarios-peluqueria-caninca-felina-2.jpg' %}" class="imagen_mascota">
+                     <h4>Maria Pizarro 
+                    </h4>
+                </article>
+                <article>
+                    <img src="{% static 'core/img/veterinario-rozas.jpg' %}" class="imagen_mascota">
+                    <h4>Alejandra Suarez </h4>
+                </article>
+                <article>
+                    <img src="{% static 'core/img/veterinario_medico.png' %}" class="imagen_mascota">
+                    <h4>Jackob Guerra</h4>
+                </article>
+                   
+        </div>
+      
+
+
+    </section>
+    <section id="info"> 
+        <h3>El amor es una palabra de 4 patas</h3>
+        <div class="contenedor">
+            <div class="info-pet">
+                <img src="{% static 'core/img/perros-raza-grande.jpg' %}" alt="">
+                <h4>Bobby</h4>
+            </div>
+
+
+            <div class="info-pet">
+                <img src="{% static 'core/img/gatito-bebe-todo-mascotas-euroresidentes-300x250.jpg' %}" alt="">
+                <h4>Thomas</h4>
+            </div>
+
+
+            <div class="info-pet">
+                <img src="{% static 'core/img/masota.jpg' %}" alt="">
+                <h4>Jhon</h4>
+            </div>
+
+
+            <div class="info-pet">
+                <img src="{% static 'core/img/razas_de_conejos_enanos_o_toy_24086_600.jpg' %}" alt="">
+                <h4>Kitty</h4>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+
+{% endblock %}
+

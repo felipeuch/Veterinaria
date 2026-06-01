@@ -1,0 +1,340 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+{% endblock %}
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script> 
+
+{% endblock %}
+
+{% block contenido %}
+
+
+<h1 class="gl1">Galería Fotografica</h1>
+    
+    <ul class="galeria">
+        <li><a href="#img1"><img src="{% static 'core/img2/galeria1.jpg' %}"></a></li>
+        <li><a href="#img2"><img src="{% static 'core/img2/galeria2.jpg' %}"></a></li>
+        <li><a href="#img3"><img src="{% static 'core/img2/galeria3.jpg' %}"></a></li>
+        <li><a href="#img4"><img src="{% static 'core/img2/galeria4.jpg' %}"></a></li>
+        <li><a href="#img5"><img src="{% static 'core/img2/galeria5.jpg' %}"></a></li>
+        <li><a href="#img6"><img src="{% static 'core/img2/galeria6.jpg' %}"></a></li>
+        <li><a href="#img7"><img src="{% static 'core/img2/galeria7.jpg' %}"></a></li>
+        <li><a href="#img8"><img src="{% static 'core/img2/galeria8.jpg' %}"></a></li>
+        <li><a href="#img9"><img src="{% static 'core/img2/galeria9.jpg' %}"></a></li>
+        <li><a href="#img10"><img src="{% static 'core/img2/galeria10.jpg' %}"></a></li>
+        <li><a href="#img11"><img src="{% static 'core/img2/galeria11.jpg' %}"></a></li>
+        <li><a href="#img12"><img src="{% static 'core/img2/galeria12.jpg' %}"></a></li>
+        <li><a href="#img13"><img src="{% static 'core/img2/galeria13.jpg' %}"></a></li>
+        <li><a href="#img14"><img src="{% static 'core/img2/galeria14.jpg' %}"></a></li>
+        <li><a href="#img15"><img src="{% static 'core/img2/galeria15.jpg' %}"></a></li>
+        <li><a href="#img16"><img src="{% static 'core/img2/galeria16.jpg' %}"></a></li>
+        <li><a href="#img17"><img src="{% static 'core/img2/galeria17.jpg' %}"></a></li>
+        <li><a href="#img18"><img src="{% static 'core/img2/galeria18.jpg' %}"></a></li>
+        <li><a href="#img19"><img src="{% static 'core/img2/galeria19.jpg' %}"></a></li>
+        <li><a href="#img20"><img src="{% static 'core/img2/galeria20.jpg' %}"></a></li>
+        <li><a href="#img21"><img src="{% static 'core/img3/galeria21.jpg' %}"></a></li>  
+        <li><a href="#img22"><img src="{% static 'core/img3/galeria22.jpg' %}"></a></li>
+        <li><a href="#img23"><img src="{% static 'core/img3/galeria23.jpg' %}"></a></li>
+        <li><a href="#img24"><img src="{% static 'core/img3/galeria24.jpg' %}"></a></li>
+        <li><a href="#img25"><img src="{% static 'core/img3/galeria25.jpg' %}"></a></li> 
+        <li><a href="#img26"><img src="{% static 'core/img3/galeria26.jpg' %}"></a></li>
+        <li><a href="#img27"><img src="{% static 'core/img3/galeria27.jpg' %}"></a></li>
+        <li><a href="#img28"><img src="{% static 'core/img3/galeria28.jpg' %}"></a></li>
+        <li><a href="#img29"><img src="{% static 'core/img3/galeria29.jpg' %}"></a></li>
+        <li><a href="#img30"><img src="{% static 'core/img3/galeria30.jpg' %}"></a></li> 
+
+
+
+        
+    </ul>
+    
+
+    <div class="modal" id="img1">
+        <h3>Perro 1</h3>
+        <div class="imagen">
+            <a href="#img30">&#60;</a>
+            <a href="#img2"><img src="{% static 'core/img2/galeria1.jpg' %}"></a>
+            <a href="#img2">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+    </div>
+    
+    <div class="modal" id="img2">
+        <h3>Perro 2</h3>
+        <div class="imagen">
+            <a href="#img1">&#60;</a>
+            <a href="#img3"><img src="{% static 'core/img2/galeria2.jpg' %}"></a>
+            <a href="#img3">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+    </div>
+    
+    <div class="modal" id="img3">
+        <h3>Perro 3</h3>
+        <div class="imagen">
+            <a href="#img2">&#60;</a>
+            <a href="#img4"><img src="{% static 'core/img2/galeria3.jpg' %}"></a>
+            <a href="#img4">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+    </div>
+    
+    <div class="modal" id="img4">
+        <h3>Perro 4</h3>
+        <div class="imagen">
+            <a href="#img3">&#60;</a>
+            <a href="#img5"><img src="{% static 'core/img2/galeria4.jpg' %}"></a>
+            <a href="#img5">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+   </div>
+
+   <div class="modal" id="img5">
+        <h3>Perro 5</h3>
+        <div class="imagen">
+            <a href="#img4">&#60;</a>
+            <a href="#img6"><img src="{% static 'core/img2/galeria5.jpg' %}"></a>
+            <a href="#img6">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+    </div>
+    <div class="modal" id="img6">
+            <h3>Perro 6</h3>
+            <div class="imagen">
+                <a href="#img5">&#60;</a>
+                <a href="#img7"><img src="{% static 'core/img2/galeria6.jpg' %}"></a>
+                <a href="#img7">></a>
+            </div>
+            <a class="cerrar" href="">X</a>
+        </div>
+        <div class="modal" id="img7">
+                <h3>Perro 7</h3>
+                <div class="imagen">
+                    <a href="#img6">&#60;</a>
+                    <a href="#img8"><img src="{% static 'core/img2/galeria7.jpg' %}"></a>
+                    <a href="#img8">></a>
+                </div>
+                <a class="cerrar" href="">X</a>
+            </div>
+       <div class="modal" id="img8">
+                    <h3>Perro 8</h3>
+                    <div class="imagen">
+                        <a href="#img7">&#60;</a>
+                        <a href="#img9"><img src="{% static 'core/img2/galeria8.jpg' %}"></a>
+                        <a href="#img9">></a>
+                    </div>
+                    <a class="cerrar" href="">X</a>
+                </div>
+         <div class="modal" id="img9">
+                        <h3>Perro 9</h3>
+                        <div class="imagen">
+                            <a href="#img8">&#60;</a>
+                            <a href="#img10"><img src="{% static 'core/img2/galeria9.jpg' %}"></a>
+                            <a href="#img10">></a>
+                        </div>
+                        <a class="cerrar" href="">X</a>
+        </div>
+
+        <div class="modal" id="img10">
+                            <h3>Perro 10</h3>
+                            <div class="imagen">
+                                <a href="#img9">&#60;</a>
+                                <a href="#img11"><img src="{% static 'core/img2/galeria10.jpg' %}"></a>
+                                <a href="#img11">></a>
+                            </div>
+                            <a class="cerrar" href="">X</a>
+                        </div>
+    
+       <div class="modal" id="img11">
+                                <h3>Perro 11</h3>
+                                <div class="imagen">
+                                    <a href="#img10">&#60;</a>
+                                    <a href="#img12"><img src="{% static 'core/img2/galeria11.jpg' %}"></a>
+                                    <a href="#img12">></a>
+                                </div>
+                                <a class="cerrar" href="">X</a>
+        </div>
+
+        <div class="modal" id="img12">
+                <h3>Perro 12</h3>
+                <div class="imagen">
+                    <a href="#img11">&#60;</a>
+                    <a href="#img13"><img src="{% static 'core/img2/galeria12.jpg' %}"></a>
+                    <a href="#img13">></a>
+                </div>
+                <a class="cerrar" href="">X</a>
+        </div>
+        <div class="modal" id="img13">
+                <h3>Perro 13</h3>
+                <div class="imagen">
+                    <a href="#img12">&#60;</a>
+                    <a href="#img14"><img src="{% static 'core/img2/galeria13.jpg' %}"></a>
+                    <a href="#img14">></a>
+                </div>
+                <a class="cerrar" href="">X</a>
+        </div>
+
+        <div class="modal" id="img14">
+                <h3>Perro 14</h3>
+                <div class="imagen">
+                    <a href="#img13">&#60;</a>
+                    <a href="#img15"><img src="{% static 'core/img2/galeria14.jpg' %}"></a>
+                    <a href="#img15">></a>
+                </div>
+                <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img15">
+        <h3>Perro 15</h3>
+        <div class="imagen">
+            <a href="#img14">&#60;</a>
+            <a href="#img16"><img src="{% static 'core/img2/galeria15.jpg' %}"></a>
+            <a href="#img16">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img16">
+        <h3>Perro 16</h3>
+        <div class="imagen">
+            <a href="#img15">&#60;</a>
+            <a href="#img17"><img src="{% static 'core/img2/galeria16.jpg' %}"></a>
+            <a href="#img17">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img17">
+        <h3>Perro 17</h3>
+        <div class="imagen">
+            <a href="#img16">&#60;</a>
+            <a href="#img18"><img src="{% static 'core/img2/galeria17.jpg' %}"></a>
+            <a href="#img18">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img18">
+        <h3>Perro 18</h3>
+        <div class="imagen">
+            <a href="#img17">&#60;</a>
+            <a href="#img19"><img src="{% static 'core/img2/galeria18.jpg' %}"></a>
+            <a href="#img19">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img19">
+        <h3>Perro 19</h3>
+        <div class="imagen">
+            <a href="#img18">&#60;</a>
+            <a href="#img20"><img src="{% static 'core/img2/galeria19.jpg' %}"></a>
+            <a href="#img20">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img20">
+        <h3>Perro 20</h3>
+        <div class="imagen">
+            <a href="#img19">&#60;</a>
+            <a href="#img21"><img src="{% static 'core/img2/galeria20.jpg' %}"></a>
+            <a href="#img21">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img21">
+        <h3>Perro 21</h3>
+        <div class="imagen">
+            <a href="#img20">&#60;</a>
+            <a href="#img22"><img src="{% static 'core/img3/galeria21.jpg' %}"></a>
+            <a href="#img22">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img22">
+        <h3>Perro 22</h3>
+        <div class="imagen">
+            <a href="#img21">&#60;</a>
+            <a href="#img23"><img src="{% static 'core/img3/galeria22.jpg' %}"></a>
+            <a href="#img23">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img23">
+        <h3>Perro 23</h3>
+        <div class="imagen">
+            <a href="#img22">&#60;</a>
+            <a href="#img24"><img src="{% static 'core/img3/galeria23.jpg' %}"></a>
+            <a href="#img24">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img24">
+        <h3>Perro 24</h3>
+        <div class="imagen">
+            <a href="#img23">&#60;</a>
+            <a href="#img25"><img src="{% static 'core/img3/galeria24.jpg' %}"></a>
+            <a href="#img25">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img25">
+        <h3>Perro 25</h3>
+        <div class="imagen">
+            <a href="#img24">&#60;</a>
+            <a href="#img26"><img src="{% static 'core/img3/galeria25.jpg' %}"></a>
+            <a href="#img26">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img26">
+        <h3>Perro 26</h3>
+        <div class="imagen">
+            <a href="#img25">&#60;</a>
+            <a href="#img27"><img src="{% static 'core/img3/galeria26.jpg' %}"></a>
+            <a href="#img27">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img27">
+        <h3>Perro 27</h3>
+        <div class="imagen">
+            <a href="#img26">&#60;</a>
+            <a href="#img28"><img src="{% static 'core/img3/galeria27.jpg' %}"></a>
+            <a href="#img28">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img28">
+        <h3>Perro 28</h3>
+        <div class="imagen">
+            <a href="#img27">&#60;</a>
+            <a href="#img29"><img src="{% static 'core/img3/galeria28.jpg' %}"></a>
+            <a href="#img29">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img29">
+        <h3>Perro 29</h3>
+        <div class="imagen">
+            <a href="#img28">&#60;</a>
+            <a href="#img30"><img src="{% static 'core/img3/galeria29.jpg' %}"></a>
+            <a href="#img30">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+<div class="modal" id="img30">
+        <h3>Perro 30</h3>
+        <div class="imagen">
+            <a href="#img29">&#60;</a>
+            <a href="#img1"><img src="{% static 'core/img3/galeria30.jpg' %}"></a>
+            <a href="#img1">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+</div>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    {% load static %}
+    {% block css %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'core/css/diseño.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/banner_perro.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/slider.css' %}">
+
+    <body background="{% static 'core/img/bg2.png' %}"></body>
+    <header>
+        <div class="contenedor">
+            <h1 class="icon-guidedog">El Pata</h1>
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="menu">
+                    <a href="{% url 'home' %}">Inicio</a>
+                    <a href="{% url 'contacto' %}">Misión</a>
+                    <a href="{% url 'galeria' %}">Galeria</a>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'nueva_mascota' %}">Nueva Mascota</a>
+                    <a href="{% url 'listado_mascota' %}">Listado Mascota</a> 
+                    <a href="#">Usuario: {{ user.username }} </a>
+                    <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                    {% else %}
+                    <a href="{% url 'login' %}">Iniciar Sesión</a>
+                    <a href="{% url 'registro_usuario' %}">Registrarse</a>
+                    {% endif %}
+                </nav>
+        
+            </div>
+        </header>
+
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+            <h2>Autenticación</h2>
+            {% load crispy_forms_tags %}
+            <form action="" method="POST">
+                {% csrf_token %}
+               
+                    {{ form | crispy }}
+             
+               
+                <input type="submit" value="Login" class="btn btn-success float-right">
+            </form>
+    </div>
+   
+    <footer>
+        <div class="contenedor">
+                     <p class="copy">El Pata &copy; 2019</p>
+            <div class="sociales">
+                <a class="icon-home" href="{% url 'home' %}"></a>
+                <a class="icon-facebook-squared" href="#"></a>
+                <a class="icon-instagram" href="https://www.instagram.com/elpata__/"  target="_blank"></a>   
+               
+                
+            </div>
+        </div>
+
+</body>
+</html>

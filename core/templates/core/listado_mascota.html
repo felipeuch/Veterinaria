@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="{% static 'core/js/confirmacion.js' %}"></script> 
+{% endblock %}
+
+{% block css %}
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   {% endblock %}
+
+
+{% block contenido %}
+
+<br>
+<br>
+<br>
+<h2>Listado Mascota<h2>
+    <br>
+
+<table class="table table-striped">
+    <tr>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Peso</th>
+        <th>Color</th>
+        <th>Fecha</th>
+        <th>Imagen</th>
+    </tr>
+
+    {% for m in mascotas %}
+    
+    <tr>
+        <td>{{ m.nombre }}</td>
+        <td>{{ m.descripcion }}</td>
+        <td>{{ m.peso }}</td>
+        <td>{{ m.color }}</td>
+        <td>{{ m.fecha_nacimiento_mascota }}</td>
+        <td>
+            {% if m.imagen %}
+            <img src="{{m.imagen.url}}" width="200" height="100">
+            {% endif %}
+        </td>
+        <td>
+            <a href="{% url 'modificar_mascota' m.id %}">Modificar</a>
+            <a href="#" onclick="confirmarEliminacion({{m.id}})">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table> 
+
+{% endblock %}

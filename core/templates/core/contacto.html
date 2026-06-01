@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   {% endblock %}
+
+{% block contenido %}
+
+
+<br>
+<br>
+<br>
+<h2>¿Quiénes Somos?</h2>
+
+<p>{{ mision.descripcion }}</p>
+ <br>
+<h2>¿Dónde nos encontramos?</h2>       
+<div id=map>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13293.272947751757!2d-70.58597515138646!3d-33.597046483428336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d7050ea40e21%3A0xaabdd1cbec8992e3!2sHappy%20Animal!5e0!3m2!1ses!2scl!4v1568161020182!5m2!1ses!2scl" width="100%" height="860"  frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+</div>
+
+
+
+
+{% endblock %}

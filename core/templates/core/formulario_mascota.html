@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+
+{% block contenido %}
+
+<div id="principal">
+        <br>
+        <div class="contenedor_mascota">
+           
+            <form action="" id="formularioRaza">
+                <label for="txtFormulario_mascota">Formulario Mascota</label>
+                <br>
+                <br>
+                <label for="txtNombre_mascota">Nombre</label>
+                <input type="text" name="txtNombre_mascota" id="txtNombre_mascota">
+                <br>
+                <label for="txtTipoMascota">Tipo de mascota</label>
+                <input type="text" name="txtTipoMascota" id="txtTipoMascota">
+                <br>
+                <label for="txtRaza">Raza</label>
+                <input type="text" name="txtRaza" id="txtRaza">
+                <br>
+                <label for="txtDescripcion">Descripcion</label>
+                <input type="text" name="txtDescripcion" id="txtDescripcion">
+                <br>
+                <label for="txtColor_principal">Color principal</label>
+                <input type="text" name="txtColor_principal" id="txtColor_principal">
+                <br>
+                <label for="txtPeso">Peso</label>
+                <input type="number" name="txtPeso" id="txtPeso">    
+                <br>
+                <input type="file" name="fl_imagen" id="fl_imagen"> 
+                <br>
+                <input type="reset" value="Limpiar">
+                <input type="button" value="Enviar" id="btnEnviar">
+            </form>
+
+            <br>
+
+            
+                
+            </table>
+
+        </div>
+    </div>
+    
+{% endblock %}

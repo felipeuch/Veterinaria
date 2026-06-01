@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+{% endblock %}
+
+
+{% block contenido %}
+
+<div id="principal">
+    <br>
+    <div class="contenedor_cliente">
+       
+        <form action="" id="formularioCliente">
+            <label for="txtFormulario_cliente">Formulario Cliente</label>
+            <br>
+            <br>
+            <label for="txtNombre">Nombre</label>
+            <input type="text" name="txtNombre" id="txtNombre">
+            <br>
+            <br>
+            <label for="txtEmail">Email</label>
+            <input type="email" name="txtEmail" id="txtEmail">
+            <br>
+            <br>
+            <label for="txtMensaje">Mensaje</label>
+            <textarea type="text" name="txtMensaje" id="txtMensaje" cols="30" rows="10"></textarea>   
+            <br>
+            <br>
+            <label for="txtTelefono">Telefono</label>
+            <input type="number" name="txtTelefono" id="txtTelefono">
+            <br>
+            <br>
+            <input type="reset" value="Limpiar">
+            <input type="button" value="Enviar" id="btnEnviar">
+        </form>
+
+        <br>
+
+        
+            
+        </table>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'core/js/formulario_jquery.js' %}"></script>
+{% endblock %}

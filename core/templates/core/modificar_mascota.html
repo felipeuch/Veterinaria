@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block css %}
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   {% endblock %}
+
+
+{% block contenido %}
+
+<br>
+<br>
+<br>
+<h2>Modificar Mascota</h2>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+            {{ form | crispy }}
+    
+
+    <div>
+            <input type="reset" value="Limpiar" class="btn btn-info">
+            <input type="submit" value="Modificar" class="btn btn-success">
+    </div>
+   
+  
+</form>
+
+{{mensaje}}
+{% endblock %}
